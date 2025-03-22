@@ -1,0 +1,10 @@
+def fino_memo(n):
+    if(n <= 1):
+        return n
+    list = [0, 1]
+    for i in range(2, n + 1):
+        list.append(list[i - 1] + list[i - 2])
+
+    return list[n] % 1234567
+def solution(n):
+    return fino_memo(n)
